@@ -38,6 +38,7 @@ public class Excecao extends JPanel {
 		btOk.setToolTipText("Processa o cálculo");
 		btOk.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ev) {
+				try{
 					int num1 = Integer.parseInt(tfNum1.getText());
 					int num2 = Integer.parseInt(tfNum2.getText());
 
@@ -50,6 +51,11 @@ public class Excecao extends JPanel {
 					tfNum1.setText("");
 					tfNum2.setText("");
 					tfNum1.requestFocus();
+				}catch(ArithmeticException ex){
+					JOptionPane.showMessageDialog(null, "Você não pode fazer divisão com 0");
+				}catch(NumberFormatException ex){
+					JOptionPane.showMessageDialog(null, "Informe apenas números");
+				}
 			}
 		});
 		botoes.add(btOk);

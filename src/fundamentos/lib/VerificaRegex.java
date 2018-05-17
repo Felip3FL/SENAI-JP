@@ -10,6 +10,7 @@ import javax.swing.JTextField;
 
 public class VerificaRegex extends InputVerifier implements Validador {
 	private JLabel msg;
+	private JTextField msgText;
 	private StatusValidador ok = StatusValidador.EM_BRANCO;
 	private Pattern ptrn = null;
 	private Color fore = Color.white;
@@ -33,6 +34,12 @@ public class VerificaRegex extends InputVerifier implements Validador {
 		usaCor = false;
 		ptrn = Pattern.compile(regex);
 	}
+	
+	public VerificaRegex(JTextField err, String regex) {
+		msgText = err;
+		usaCor = false;
+		ptrn = Pattern.compile(regex);
+	}	
 
 	public VerificaRegex(JLabel err, String regex, boolean cor) {
 		msg = err;

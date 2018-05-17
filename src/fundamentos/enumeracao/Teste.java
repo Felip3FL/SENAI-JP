@@ -11,7 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import fundamentos.gui.Util;
+import fundamentos.gui.professor.Util;
 
 enum Estacoes {
 	PRIMAVERA(22) {

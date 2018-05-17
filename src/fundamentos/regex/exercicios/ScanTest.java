@@ -1,7 +1,7 @@
 package fundamentos.regex.exercicios;
 
-import static fundamentos.gui.Util.criaBotao;
-import static fundamentos.gui.Util.criaPainel;
+import static fundamentos.gui.professor.Util.criaBotao;
+import static fundamentos.gui.professor.Util.criaPainel;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
@@ -21,25 +21,27 @@ import javax.swing.JTextField;
 @SuppressWarnings("serial")
 public class ScanTest extends JFrame implements ActionListener {
 	// CEP: "99999-999"
-	String cep = "";
+	String cep = "[0-9]{1,5}-[0-9]{1,3}";
 
 	// FONE: "[[99 ](99) ][9]9999-9999"
-	String fone = "";
+	String fone = "([0-9]{1,4} )?(\\([0-9]{1,4}\\) )?[0-9]{1,4}-[0-9]{1,4}";
 
 	// RG: "[99]9.999.999[-X]"
-	String rg = "";
+	String rg = "[0-9]{1,3}\\.[0-9]{3}\\.[0-9]{3}(-[A-Z])?";
+	
 
 	// CPF: "[99]9.999.999-99"
-	String cpf = "";
+	String cpf = "[0-9]{1,3}\\.[0-9]{3}\\.[0-9]{3}(-[0-9]{1,2})?";
 
 	// CNPJ: "[99]9.999.999/9999-99"
-	String cnpj = "";
+	String cnpj = "[0-9]{1,3}\\.[0-9]{3}\\.[0-9]{3}/[0-9]{4}-[0-9]{2}";
 
 	// E-mail: "[xx.]xx@xxxxx.xxxxx.xxxxx"
-	String email = "";
+	String email = "[a-z_0-9\\._]{1,50}@[a-z]{1,50}\\.[a-z]{1,3}(\\.[a-z]{2})?";
+	
 	
 	// URL: "xxxx.xxxxx.xxxxx"
-	String site = "";
+	String site = "([www]{3}\\.)?[a-z_0-9\\.]{1,99}\\.[a-z]{1,99}";
 
 	private JTextField tfCep = new JTextField(9);
 	private JTextField tfFone = new JTextField(18);

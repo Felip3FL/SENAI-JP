@@ -1,7 +1,7 @@
 package fundamentos.regex.respostas;
 
-import static fundamentos.gui.Util.criaBotao;
-import static fundamentos.gui.Util.criaPainel;
+import static fundamentos.gui.professor.Util.criaBotao;
+import static fundamentos.gui.professor.Util.criaPainel;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
