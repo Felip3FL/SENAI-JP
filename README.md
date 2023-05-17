@@ -14,9 +14,8 @@
 
 ## 📃 Descrição do projeto
 
-<p align="justify">
- Projeto desenvolvido usando JAVA com o proposito de estudo
-</p>
+Projeto desenvolvido usando JAVA com o proposito de estudo. Parte do conhecimento deste projeto foi do curso ``Programação Java`` do ``SENAI``
+
 
 <BR>
 
